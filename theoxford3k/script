@@ -1,0 +1,14 @@
+#!/bin/bash
+
+maxline=3522
+minline=5
+number=0 
+while [ "$number" -le $minline ]
+do
+	number=$RANDOM
+	let "number %= $maxline"
+done
+
+#echo "random number: $number"
+
+head -$number ~/.conky/theoxford3k/data.txt | tail -n 5 | cat -b |  fold -s -w60

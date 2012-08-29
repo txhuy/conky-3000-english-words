@@ -1,0 +1,80 @@
+# conky configuration
+
+own_window		yes 
+own_window_class	Conky 
+own_window_transparent	yes 
+own_window_type		override 
+own_window_hints	undecorated,below,sticky,skip_taskbar,skip_pager 
+
+# The following parameters can be changed
+# Minimum
+minimum_size 300 0
+
+# Minimum width
+maximum_width 300
+
+# Location of the window
+# Upper left corner of the screen
+	# Alignment top_left
+# Lower left corner of the screen
+	# Alignment bottom_left
+# Top right corner of the screen
+	alignment top_right
+# Lower right corner of the screen
+	# Alignment bottom_right
+
+# Distance between the edge of the screen and the window
+# Horizontal
+gap_x 10
+# Vertical
+gap_y 35
+
+background no
+
+use_xft yes
+
+xftfont Dejavu-10
+
+xftalpha 0.5
+
+update_interval 2.0
+
+total_run_times 0
+
+double_buffer yes
+
+draw_shades no
+
+draw_outline no
+
+draw_borders no
+
+border_width 1
+
+default_color white
+default_shade_color black
+default_outline_color white
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+uppercase no
+
+# Number of cpu samples to average
+# Set to 1 to disable averaging
+cpu_avg_samples 2
+
+# Number of net samples to average
+# Set to 1 to disable averaging
+net_avg_samples 2
+
+override_utf8_locale yes
+
+#Text buffer
+text_buffer_size 512
+
+TEXT
+${color red}${font TimesNewRoman-13}The Oxford 3000™:
+${color lightgrey}${font}${execi 300 ~/.conky/theoxford3k/script}
+
+#HHH :P
